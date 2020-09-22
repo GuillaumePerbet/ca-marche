@@ -1,5 +1,17 @@
 <?php get_header(); ?>
 
+<!-- Ajout du menu des catégories -->
+<?php
+    if (has_nav_menu('category-menu')){
+        wp_nav_menu(
+            array(
+                'theme_location' => 'category-menu',
+                'menu_class' => 'category-menu'
+            )
+        );
+    }
+?>
+
 <!-- boucle sur tous les posts -->
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
