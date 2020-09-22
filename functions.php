@@ -37,14 +37,16 @@ function camarche_load(){
 }
 add_action( 'wp_enqueue_scripts', 'camarche_load' );
 
-//Ajouter le menu
+//Ajouter les menus
 function register_my_menu() {
+    //Header Menu
     register_nav_menu('header-menu',__( 'Header Menu' ));
+    //Category Menu
+    register_nav_menu('category-menu',__( 'Category Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
 
 //Ajouter le lien vers le dernier post dans le menu
-
 // Front end only, don't hack on the settings page
 if ( ! is_admin() ) {
     add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_nav_menu_item_with_latest_post', 10, 3 );
