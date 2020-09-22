@@ -11,8 +11,20 @@
     <?php wp_body_open(); ?>
 
     <header class="header">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        <!-- menu -->
+        <?php
+            if (has_nav_menu('header-menu')){
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'header-menu',
+                        'menu_class' => 'navbar'
+                    )
+                );
+            }
+        ?>
+        <!-- ??? -->
         <a href="<?php echo home_url( '/' ); ?>">
+        <!-- logo -->
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
         </a>  
     </header>

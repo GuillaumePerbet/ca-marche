@@ -42,3 +42,36 @@ function register_my_menu() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+//Ajouter le lien vers le dernier post dans le menu
+
+// Front end only, don't hack on the settings page
+if ( ! is_admin() ) {
+    add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_nav_menu_item_with_latest_post', 10, 3 );
+}
+
+function replace_placeholder_nav_menu_item_with_latest_post( $items , $menu , $args ) {
+    // Loop through the menu items looking for placeholder
+    foreach ( $items as $item ) {
+
+        // Is this the placeholder we're looking for?
+        if ( '#latestpost' != $item->url ){
+            continue;
+        }
+
+        // Get the latest post
+        $latestpost = get_posts( array(
+            'numberposts' => 1,
+        ) );
+
+        if ( empty( $latestpost ) ){
+            continue;
+        }
+
+        // Replace the placeholder with the real URL
+        $item->url = get_permalink( $latestpost[0]->ID );
+    }
+
+    // Return the modified (or maybe unmodified) menu items array
+    return $items;
+}
