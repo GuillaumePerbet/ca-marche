@@ -12,18 +12,21 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
 
-        <!-- header menu -->
-        <!-- désactiver sur page 404 is_404()?-->
-        <header>
-            <?php
-                if (has_nav_menu('header-menu')){
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'header-menu',
-                            'container' => 'ul',
-                            'menu_class' => 'header-menu'
-                        )
-                    );
-                }
-            ?>
-        </header>
+        <?php
+        if (!is_404() && has_nav_menu('header-menu')){
+        ?>
+            <!-- header menu -->
+            <header>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'header-menu',
+                        'container' => 'ul',
+                        'menu_class' => 'header-menu'
+                    )
+                );
+                ?>
+            </header>
+        <?php
+        }
+        ?>
