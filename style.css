@@ -7,3 +7,65 @@ Description: Mes plus belles randos
 Requires at least: WordPress 5.0
 Version: 1.0
 */
+
+/* VARIABLES */
+:root{
+    --dark-white: #F8F6EF;
+    --green: #8D8741;
+    --dark-green: #504C20;
+    --blue: #659DBD;
+    --dark-blue: #146DA0;
+    --ocher: #DAAD86;
+    --extra-bold: 800;
+    --bold: 700;
+    --semi-bold: 600;
+    --medium: 500;
+    --regular: 400;
+}
+
+/* GENERAL TEXT */
+.txt-center{
+    text-align: center;
+}
+
+/* LOGO SIZE*/
+.logo{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 404 PAGE*/
+.error404{
+    background-image: url('img/404.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title404{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--extra-bold);
+    font-size: 42px;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    #title404{
+        font-size: 62px;
+    }
+}
+
+#text404{
+    font-family: 'Raleway', sans-serif;
+    font-weight: var(--semi-bold);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    #text404{
+        font-size: 48px;
+    }
+}
