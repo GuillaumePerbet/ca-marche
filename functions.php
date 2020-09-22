@@ -9,30 +9,31 @@ add_theme_support( 'title-tag' );
 // Ajouter les styles et les scripts
 function camarche_load(){
     //style.css
-    wp_enqueue_style( 
-        'camarche',
-        get_stylesheet_uri(), 
-        array(), 
-        '1.0'
+    wp_enqueue_style(
+        'style',
+        get_stylesheet_uri()
+    );
+
+    //grid.css
+    wp_enqueue_style(
+        'grid',
+        get_template_directory_uri() . '/grid.css'
     );
 
     //jquery
     wp_deregister_script( 'jquery' ); // On annule l'inscription du jQuery de WP
     wp_enqueue_script( // On déclare une version plus moderne
         'jquery',
-        'https://code.jquery.com/jquery-3.5.1.min.js', 
-        false, 
-        '3.5.1', 
-        true 
+        'https://code.jquery.com/jquery-3.5.1.min.js',
+        array(),
+        '3.5.1',
     );
 
     //script.js
     wp_enqueue_script( 
-        'camarche', 
-        get_template_directory_uri() . '/script.js', 
-        array( 'jquery' ), 
-        '1.0', 
-        true
+        'script',
+        get_template_directory_uri() . '/script.js',
+        array( 'jquery' )
     );
 }
 add_action( 'wp_enqueue_scripts', 'camarche_load' );
