@@ -8,6 +8,7 @@
             wp_nav_menu(
                 array(
                     'theme_location' => 'category-menu',
+                    'container' => 'ul',
                     'menu_class' => 'category-menu'
                 )
             );
