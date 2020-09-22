@@ -17,7 +17,7 @@
                 wp_nav_menu(
                     array(
                         'theme_location' => 'header-menu',
-                        'menu_class' => 'navbar'
+                        'menu_class' => 'header-menu'
                     )
                 );
             }
