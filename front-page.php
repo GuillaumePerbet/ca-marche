@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<!-- header bar -->
-
 <!-- logo -->
 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo avec le texte 'ça marche' en dessous d'un dessin de montagne" width="200" height="200">
 
@@ -10,8 +8,8 @@
     
     <h1><?php the_title(); ?></h1>
 
-<?php endwhile; endif; ?>
+    <!-- utiliser l'image de mise en avant pour le background -->
 
-<!-- footer bar -->
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

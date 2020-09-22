@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<!-- header bar -->
-
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 <article class="post">
@@ -29,7 +27,5 @@
 </article>
 
 <?php endwhile; endif; ?>
-
-<!-- footer bar -->
 
 <?php get_footer(); ?>

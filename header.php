@@ -11,3 +11,18 @@
 
     <body>
         <?php wp_body_open(); ?>
+
+        <!-- header menu -->
+        <!-- désactiver sur page 404 is_404()?-->
+        <header>
+            <?php
+                if (has_nav_menu('header-menu')){
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'header-menu',
+                            'menu_class' => 'header-menu'
+                        )
+                    );
+                }
+            ?>
+        </header>

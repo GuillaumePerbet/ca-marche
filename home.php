@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<!-- header bar -->
-
 <!-- category menu -->
+<!-- ajouter le bouton actif si on est dans une page catégorie is_category()? -->
 <nav>
     <?php
         if (has_nav_menu('category-menu')){
@@ -41,7 +40,5 @@
     </article>
 
 <?php endwhile; endif; ?>
-
-<!-- footer bar -->
 
 <?php get_footer(); ?>
