@@ -1,16 +1,6 @@
 <?php get_header(); ?>
 
-<?php 
-    if ( is_category() ) {
-        $title = "Catégorie : " . single_tag_title( '', false );
-    }
-    else {
-        $title = 'Mes plus belles randos';
-    }
-?>
-
-<h1><?php echo $title; ?></h1>
-
+<!-- boucle sur tous les posts -->
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
     <article class="post">
