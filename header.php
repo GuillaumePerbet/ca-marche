@@ -11,6 +11,7 @@
     <?php wp_body_open(); ?>
 
     <header class="header">
+        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         <a href="<?php echo home_url( '/' ); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
         </a>  
