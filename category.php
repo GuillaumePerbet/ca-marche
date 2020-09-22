@@ -1,2 +1,1 @@
-<!-- comme dans archive avec le bouton de la catégorie activé -->
-<?php get_template_part( 'archive' ); ?>
+<!-- comme home.php filtré par catégorie avec le bouton activé -->
