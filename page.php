@@ -1,22 +1,12 @@
 <?php get_header(); ?>
 
-<!-- Ajout du menu des catégories -->
-<?php
-    if (has_nav_menu('category-menu')){
-        wp_nav_menu(
-            array(
-                'theme_location' => 'category-menu',
-                'menu_class' => 'category-menu'
-            )
-        );
-    }
-?>
+<!-- logo -->
+<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
 
+<!-- Titre de la page dans wp-admin-->
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-
+    
     <h1><?php the_title(); ?></h1>
-
-    <?php the_content(); ?>
 
 <?php endwhile; endif; ?>
 
