@@ -8,10 +8,38 @@ add_theme_support( 'title-tag' );
 
 // Ajouter les styles et les scripts
 function camarche_load(){
+
+    //Montserrat font
+    wp_enqueue_style(
+        'montserrat',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap'
+    );
+
+    //Raleway font
+    wp_enqueue_style(
+        'raleway',
+        'https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap'
+    );
+
+    //Permanent Marker font
+    wp_enqueue_style(
+        'permanent-marker',
+        'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'
+    );
+
+    //Font Awesome
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css',
+        array(),
+        '5.14.0'
+    );
+
     //style.css
     wp_enqueue_style(
         'style',
-        get_stylesheet_uri()
+        get_stylesheet_uri(),
+        array( 'montserrat' , 'raleway' , 'permanent-marker' , 'font-awesome' )
     );
 
     //grid.css
@@ -26,7 +54,7 @@ function camarche_load(){
         'jquery',
         'https://code.jquery.com/jquery-3.5.1.min.js',
         array(),
-        '3.5.1',
+        '3.5.1'
     );
 
     //script.js
