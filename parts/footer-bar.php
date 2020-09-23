@@ -1,4 +1,0 @@
-<!-- footer bar -->
-<footer>
-
-</footer>
