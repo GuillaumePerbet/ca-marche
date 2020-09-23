@@ -1,13 +1,13 @@
 <?php 
 
-// Ajouter la prise en charge des images mises en avant
+//Add images from posts
 add_theme_support( 'post-thumbnails' );
 
-// Ajouter automatiquement le titre du site dans l'en-tête du site
+//Add title tag
 add_theme_support( 'title-tag' );
 
-// Ajouter les styles et les scripts
-function camarche_load(){
+//Add styles and scripts
+function load_styles_and_scripts(){
 
     //Montserrat font
     wp_enqueue_style(
@@ -49,8 +49,8 @@ function camarche_load(){
     );
 
     //jquery
-    wp_deregister_script( 'jquery' ); // On annule l'inscription du jQuery de WP
-    wp_enqueue_script( // On déclare une version plus moderne
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script(
         'jquery',
         'https://code.jquery.com/jquery-3.5.1.min.js',
         array(),
@@ -64,33 +64,25 @@ function camarche_load(){
         array( 'jquery' )
     );
 }
-add_action( 'wp_enqueue_scripts', 'camarche_load' );
+add_action( 'wp_enqueue_scripts', 'load_styles_and_scripts' );
 
-//Ajouter les menus
-function register_my_menu() {
+//Add menus
+function register_menus() {
     //Header Menu
     register_nav_menu('header-menu',__( 'Header Menu' ));
     //Category Menu
     register_nav_menu('category-menu',__( 'Category Menu' ));
 }
-add_action( 'init', 'register_my_menu' );
+add_action( 'init', 'register_menus' );
 
-//Ajouter le lien vers le dernier post dans le menu
-// Front end only, don't hack on the settings page
-if ( ! is_admin() ) {
-    add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_nav_menu_item_with_latest_post', 10, 3 );
-}
-
-function replace_placeholder_nav_menu_item_with_latest_post( $items , $menu , $args ) {
-    // Loop through the menu items looking for placeholder
+//Replace #latestpost placeholder with permalink
+function replace_placeholder_with_latest_post_permalink( $items , $menu , $args ) {
     foreach ( $items as $item ) {
 
-        // Is this the placeholder we're looking for?
         if ( '#latestpost' != $item->url ){
             continue;
         }
 
-        // Get the latest post
         $latestpost = get_posts( array(
             'numberposts' => 1,
         ) );
@@ -99,10 +91,12 @@ function replace_placeholder_nav_menu_item_with_latest_post( $items , $menu , $a
             continue;
         }
 
-        // Replace the placeholder with the real URL
         $item->url = get_permalink( $latestpost[0]->ID );
     }
 
-    // Return the modified (or maybe unmodified) menu items array
     return $items;
+}
+//Don't replace placeholder in wp-admin
+if ( ! is_admin() ) {
+    add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_with_latest_post_permalink', 10, 3 );
 }

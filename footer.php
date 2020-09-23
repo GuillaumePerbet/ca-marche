@@ -1,5 +1,6 @@
-<!-- footer bar -->
+<!-- no footer in 404 page -->
 <?php if (!is_404()){ ?>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -23,16 +24,18 @@
                     <p><i class="fas fa-calendar-alt"></i> Septembre 2020</p>
                 </div>
 
-                <!-- Terms -->
+                <!-- terms -->
                 <div class="col-4 col-md-2">
                     <p class="text-center">Politique de confidentialité</p>
                 </div>
+                
             </div>
         </div>
     </footer>
+
 <?php } ?>
 
-<!-- script tags -->
+<!-- load scripts -->
 <?php wp_footer(); ?>
 
 </body>
