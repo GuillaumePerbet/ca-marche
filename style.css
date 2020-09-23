@@ -33,12 +33,18 @@ a{
     text-decoration: none;
 }
 
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 /* TEXT */
 .text-center{
     text-align: center;
 }
 
-/* LOGO SIZE*/
+/* LOGO SIZING*/
 .logo{
     display: block;
     width: 100%;
@@ -56,8 +62,44 @@ i{
     }
 }
 
+/* HEADER */
+body>header{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: var(--green);
+}
+
+@media (min-width: 768px){
+    body>header{
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px){
+    body>header{
+        font-size: 30px;
+    }
+}
+
+#menu-header{
+    display: flex;
+}
+
+#menu-header>li{
+    flex: 1;
+    text-align: center;
+}
+
+#menu-header>li>a{
+    display: block;
+    padding: 32px 0;
+}
+
 /* FOOTER */
-footer{
+body>footer{
     background-color: var(--green);
     font-family: 'Raleway', sans-serif;
     font-weight: var(--medium);
@@ -66,24 +108,24 @@ footer{
     line-height: 135%;
 }
 
-footer div{
+body>footer div{
     margin: auto;
 }
 
 @media (max-width: 768px){
-    footer{
+    body>footer{
         text-align: center;
     }
 }
 
 @media (min-width: 436px){
-    footer{
+    body>footer{
         font-size: 14px;
     }
 }
 
 @media (min-width: 576px){
-    footer{
+    body>footer{
         font-size: 16px;
     }
 }
