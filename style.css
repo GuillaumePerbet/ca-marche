@@ -297,6 +297,59 @@ body>footer div{
     }
 }
 
+#blog{
+    background-color: var(--dark-white);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 1200px){
+    #blog{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+#blog article{
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+#blog .image{
+    position: relative;
+}
+
+#blog .image img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+}
+
+#blog .tag{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    background-color: var(--ocher);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--bold);
+    font-size: 11px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 8.5px 0;
+}
+
+@media (min-width: 768px){
+    #blog .tag{
+        font-size: 14px;
+        padding: 12px 0;
+        width: 105px;
+    }
+}
+
 /* 404 PAGE*/
 .error404{
     background-image: url('img/404.jpg');
