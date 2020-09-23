@@ -21,6 +21,7 @@ Version: 1.0
     --semi-bold: 600;
     --medium: 500;
     --regular: 400;
+    --shadow: 0 6px 3px rgba(0,0,0,0.23) , 0 10px 10px rgba(0,0,0,0.19);
 }
 
 /* RESET */
@@ -242,6 +243,9 @@ body>footer div{
     flex: 1;
     text-align: center;
     margin: 30px 15px;
+    border-radius: 5px;
+    background-color: var(--blue);
+    box-shadow: var(--shadow);
 }
 
 @media (min-width: 768px){
@@ -258,20 +262,18 @@ body>footer div{
 
 #menu-category li a{
     width: 100%;
-    padding: 10px;
-    background-color: var(--blue);
-    border-radius: 5px;
+    padding: 10px 0;
 }
 
 @media (min-width: 768px){
     #menu-category li a{
-        padding: 18px;
+        padding: 18px 0;
     }
 }
 
 @media (min-width: 1200px){
     #menu-category li a{
-        padding: 25px;
+        padding: 25px 0;
     }
 }
 
