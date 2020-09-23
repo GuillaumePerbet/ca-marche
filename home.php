@@ -52,18 +52,28 @@
                             </p>
                         </div>
             
+                        <div class="container-fluid post-footer">
+                            <div class="row">
+
+                                <!-- category -->
+                                <div class="col-4">
+                                    <p><?php the_category() ?></p>
+                                </div>
+
+                                 <!-- date -->
+                                <div class="col-4">
+                                    <p><?php the_time( get_option( 'date_format' ) ); ?></p>
+                                </div>
+
+                                <!-- link -->
+                                <div class="col-4">
+                                    <p><a class="post-link" href="<?php the_permalink(); ?>"><i class="fas fa-eye"></i> article</a></p>
+                                </div>
+                            </div>
+
+                        </div>
                         
                         
-                        <!-- date -->
-                        <p>
-                            <?php the_time( get_option( 'date_format' ) ); ?>
-                        </p>
-                        
-                        
-            
-                        <p>
-                            <a href="<?php the_permalink(); ?>" class="post__link">Lire la suite</a>
-                        </p>
                     </article>
                 </div>
         

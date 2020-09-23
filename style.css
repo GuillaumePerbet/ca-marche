@@ -292,13 +292,11 @@ body>footer div{
 #blog{
     background-color: var(--dark-white);
     padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 @media (min-width: 1200px){
     #blog{
         padding-top: 60px;
-        padding-bottom: 60px;
     }
 }
 
@@ -375,6 +373,38 @@ body>footer div{
     #blog .post-content p{
         font-size: 16px;
     }
+}
+
+#blog .post-footer{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--bold);
+    font-size: 11px;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 0 0 10px 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px){
+    #blog .post-footer{
+        font-size: 14px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+}
+
+@media (min-width: 1200px){
+    #blog .post-footer{
+        margin-bottom: 45px;
+    }
+}
+
+#blog .post-link{
+    color: var(--dark-green);
 }
 
 /* 404 PAGE*/
