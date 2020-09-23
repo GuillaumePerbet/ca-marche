@@ -61,18 +61,28 @@ footer{
     background-color: var(--green);
     font-family: 'Raleway', sans-serif;
     font-weight: var(--medium);
-    font-size: 11px;
+    font-size: 12px;
     color: white;
     line-height: 135%;
 }
 
-@media (min-width: 768px){
+footer div{
+    margin: auto;
+}
+
+@media (max-width: 768px){
+    footer{
+        text-align: center;
+    }
+}
+
+@media (min-width: 436px){
     footer{
         font-size: 14px;
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 576px){
     footer{
         font-size: 16px;
     }
@@ -124,5 +134,12 @@ footer{
 @media (min-width: 768px){
     #text404{
         font-size: 48px;
+    }
+}
+
+/* DISPLAY */
+@media (max-width: 768px){
+    .display-md{
+        display: none;
     }
 }
