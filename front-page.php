@@ -10,7 +10,7 @@
                 </p>
             </div>
         
-            <div class="col-10 offset-1 col-sm-8 offset-sm-2 offset-md-0">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 offset-md-0 col-lg-6 offset-lg-1">
                 <h1>
                     <span>mes</span>
                     <span>plus</span>
