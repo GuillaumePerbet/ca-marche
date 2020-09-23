@@ -40,22 +40,26 @@
                             </div>
                         <?php } ?>
 
-                        <!-- title -->
-                        <h2>
-                            <?php the_title(); ?>
-                        </h2>
+                        <!-- content -->
+                        <div class="post-content">
+                            <!-- title -->
+                            <h2>
+                                <?php the_title(); ?>
+                            </h2>
+
+                            <p>
+                                <?php the_excerpt(); ?>
+                            </p>
+                        </div>
             
                         
                         
-                        <!-- content -->
+                        <!-- date -->
                         <p>
-                            Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
-                            par <?php the_author(); ?> • <?php comments_number(); ?>
+                            <?php the_time( get_option( 'date_format' ) ); ?>
                         </p>
                         
-                        <p>
-                            <?php the_excerpt(); ?>
-                        </p>
+                        
             
                         <p>
                             <a href="<?php the_permalink(); ?>" class="post__link">Lire la suite</a>
