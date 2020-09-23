@@ -4,12 +4,11 @@
 <!-- ajouter le bouton actif si on est dans une page catégorie is_category()? -->
 <nav>
     <?php
-        if (has_nav_menu('category-menu')){
+        if (has_nav_menu('category')){
             wp_nav_menu(
                 array(
-                    'theme_location' => 'category-menu',
-                    'container' => 'ul',
-                    'menu_class' => 'category-menu'
+                    'theme_location' => 'category',
+                    'container' => 'ul'
                 )
             );
         }

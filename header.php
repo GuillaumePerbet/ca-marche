@@ -13,18 +13,23 @@
     <?php wp_body_open(); ?>
 
     <!-- no header menu in 404 page -->
-    <?php if (!is_404() && has_nav_menu('header-menu')){ ?>
+    <?php if (!is_404() && has_nav_menu('header')){ ?>
 
         <header>
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'header-menu',
-                    'container' => 'ul',
-                    'menu_class' => 'header-menu'
-                )
-            );
-            ?>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'header',
+                                'container' => 'ul'
+                            )
+                        );
+                        ?>
+                    </div>
+                </div>
+            </div>
         </header>
 
     <?php } ?>

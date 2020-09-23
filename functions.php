@@ -69,9 +69,9 @@ add_action( 'wp_enqueue_scripts', 'load_styles_and_scripts' );
 //Add menus
 function register_menus() {
     //Header Menu
-    register_nav_menu('header-menu',__( 'Header Menu' ));
+    register_nav_menu('header',__( 'Header' ));
     //Category Menu
-    register_nav_menu('category-menu',__( 'Category Menu' ));
+    register_nav_menu('category',__( 'Category' ));
 }
 add_action( 'init', 'register_menus' );
 
