@@ -29,6 +29,15 @@
                     </h2>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col">
+                    <!-- excerpt -->
+                    <p class="text">
+                        <?php the_excerpt(); ?>
+                    </p>
+                </div>
+            </div>
     
             <!-- content -->
             <p>

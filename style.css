@@ -488,6 +488,29 @@ body>footer div{
     }
 }
 
+#single .text{
+    font-family: 'Raleway', sans-serif;
+    font-weight: var(--medium);
+    font-size: 14px;
+    line-height: 160%;
+    color: black;
+    padding: 15px 0;
+}
+
+@media (min-width: 768px){
+    #single .text{
+        font-size: 20px;
+        padding: 30px 0;
+    }
+}
+
+@media (min-width: 1200px){
+    #single .text{
+        font-size: 28px;
+        padding: 45px 0;
+    }
+}
+
 /* 404 PAGE*/
 .error404{
     background-image: url('img/404.jpg');
