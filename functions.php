@@ -100,3 +100,6 @@ function replace_placeholder_with_latest_post_permalink( $items , $menu , $args 
 if ( ! is_admin() ) {
     add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_with_latest_post_permalink', 10, 3 );
 }
+
+//remove p tag from the_excerpt
+remove_filter( 'the_excerpt', 'wpautop' );
