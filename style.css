@@ -631,13 +631,16 @@ body>footer{
 }
 
 /* 404 PAGE*/
-.error404{
+#page404{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     background-image: url('img/404.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#title404{
+#page404 h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--extra-bold);
     font-size: 42px;
@@ -646,12 +649,12 @@ body>footer{
 }
 
 @media (min-width: 768px){
-    #title404{
+    #page404 h1{
         font-size: 62px;
     }
 }
 
-#text404{
+#page404 .text{
     font-family: 'Raleway', sans-serif;
     font-weight: var(--semi-bold);
     font-size: 24px;
@@ -660,7 +663,7 @@ body>footer{
 }
 
 @media (min-width: 768px){
-    #text404{
+    #page404 .text{
         font-size: 48px;
     }
 }
