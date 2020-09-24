@@ -17,7 +17,11 @@
                     <div class="footer-items">
                         <p><i class="fas fa-feather-alt"></i> Guillaume Perbet</p>
                         <p class="display-md"><a href="https://guillaumeperbet.fr" target="_blank" rel="noopener noreferrer">www.guillaumeperbet.fr</a></p>
-                        <p class="display-md"><i id="github" class="fab fa-github-square"></i> &nbsp; <i id="linkedin" class="fab fa-linkedin"></i></p>
+                        <p class="display-md">
+                            <i id="github" class="fab fa-github-square"></i>
+                            &nbsp; 
+                            <i id="linkedin" class="fab fa-linkedin"></i>
+                        </p>
                     </div>
                 </div>
 

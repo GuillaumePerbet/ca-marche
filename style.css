@@ -121,6 +121,33 @@ i{
     }
 }
 
+.fab{
+    font-size: 24px;
+    background-color: white;
+    line-height: 80%;
+    width: 0.8em;
+}
+
+@media (min-width: 992px){
+    .fab{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1200px){
+    .fab{
+        font-size: 36px;
+    }
+}
+
+#github{
+    color: black;
+}
+
+#linkedin{
+    color: #0073B1;
+}
+
 /* HEADER */
 body>header{
     font-family: 'Montserrat', sans-serif;
@@ -210,20 +237,6 @@ body>footer{
     .footer-items{
         font-size: 22px;
     }
-}
-
-#github{
-    font-size: 24px;
-    color: black;
-    line-height: 80%;
-    background-color: white;
-}
-
-#linkedin{
-    font-size: 24px;
-    color: #0073B1;
-    line-height: 80%;
-    background-color: white;
 }
 
 /* FRONT PAGE */
