@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main id="blog">
 
     <!-- category menu -->
     <!-- ajouter le bouton actif si on est dans une page catégorie is_category()? -->
@@ -23,7 +23,7 @@
         </div>
     </nav>
 
-    <section id="blog">
+    <section>
         <div class="container">
             <div class="row">
                 <!-- wp loop -->
@@ -57,7 +57,7 @@
 
                                 <!-- category -->
                                 <div class="col-4">
-                                    <p><?php the_category() ?></p>
+                                    <p><?php the_category(' ') ?></p>
                                 </div>
 
                                  <!-- date -->
