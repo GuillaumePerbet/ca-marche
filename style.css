@@ -350,8 +350,11 @@ body>footer div{
     font-size: 21px;
     text-align: center;
     color: var(--dark-blue);
-    padding-bottom: 20px;
     border-bottom: 1px solid var(--ocher);
+    min-height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px){
@@ -367,6 +370,9 @@ body>footer div{
     color: black;
     line-height: 160%;
     margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 105px;
+    overflow: hidden;
 }
 
 @media (min-width: 768px){
