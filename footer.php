@@ -26,7 +26,7 @@
 
                 <!-- terms -->
                 <div class="col-4 col-md-2">
-                    <p class="text-center">Politique de confidentialité</p>
+                    <p id="terms">Politique de confidentialité</p>
                 </div>
 
             </div>
