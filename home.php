@@ -47,9 +47,9 @@
                                 <?php the_title(); ?>
                             </h2>
 
-                            <p>
+                            <div class="excerpt">
                                 <?php the_excerpt(); ?>
-                            </p>
+                            </div>
                         </div>
             
                         <div class="container-fluid post-footer">
