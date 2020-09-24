@@ -37,7 +37,7 @@
                 <!-- terms -->
                 <div class="col-4 col-md-2">
                     <div class="footer-items">
-                        <p>Politique de confidentialité</p>
+                        <p><a href="<?php echo get_permalink(get_page_by_title('Politique de confidentialité')); ?>">Politique de confidentialité</a></p>
                     </div>
                 </div>
 
