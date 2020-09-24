@@ -375,6 +375,10 @@ body>footer{
     }
 }
 
+#home{
+    background-color: var(--dark-white);
+}
+
 #home h1{
     font-family: 'Permanent Marker', sans-serif;
     font-size: 44px;
@@ -534,11 +538,15 @@ body>footer{
     }
 }
 
-#blog>section{
+#blog{
     background-color: var(--dark-white);
 }
 
 /* SINGLE PAGE */
+#single{
+    background-color: var(--dark-white);
+}
+
 #single #category{
     display: flex;
     color: white;
