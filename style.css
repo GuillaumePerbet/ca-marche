@@ -419,6 +419,47 @@ body>footer{
     text-align: right;
 }
 
+#hero .blog-link{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--extra-bold);
+    font-size: 22px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#hero .blog-link i{
+    font-size: 18px;
+}
+
+@media (min-width: 768px){
+    #home .blog-link{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: var(--bold);
+        font-size: 24px;
+        color: var(--dark-green);
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    #home .blog-link i{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px){
+    #home .blog-link{
+        font-size: 34px;
+        padding: 30px 0;
+    }
+
+    #home .blog-link i{
+        font-size: 26px;
+    }
+}
+
 /* BLOG PAGE */
 #blog #category{
     background-image: url('img/panorama.jpg');
