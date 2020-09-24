@@ -2,85 +2,109 @@
 
 <main id="single">
 
-    <?php if( have_posts() ){ while( have_posts() ){ the_post(); ?>
+    <!-- get the_post -->
+    <?php if( have_posts() ){ the_post(); ?>
+
     <article >
 
-        <!-- image -->
-        <?php if ( has_post_thumbnail() ){ ?>
-            <div class="image">
-                <?php the_post_thumbnail(); ?>
-            </div>
-        <?php } ?>
+        <header>
 
-        <div id="category">
-            <!-- tag -->
-            <p><?php the_tags(''); ?></p>
-
-            <!-- category -->
-            <p><?php the_category(' '); ?></p>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <!-- title -->
-                    <h2>
-                        <?php the_title(); ?>
-                    </h2>
-                </div>
+            <!-- image -->
+            <?php if ( has_post_thumbnail() ){ ?>
+                <div class="size-image-parent"><?php the_post_thumbnail(); ?></div>
+            <?php } ?>
+    
+            <div id="category">
+    
+                <!-- tag -->
+                <p><?php the_tags(''); ?></p>
+    
+                <!-- category -->
+                <p><?php the_category(' '); ?></p>
+    
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <!-- excerpt -->
-                    <div class="text">
-                        <?php the_excerpt(); ?>
+        </header>
+
+        <section>
+            <div class="container">
+
+                <!-- post title -->
+                <div class="row">
+                    <div class="col">
+                        <header>
+                            <h1 class="title"><?php the_title(); ?></h1>
+                        </header>
                     </div>
                 </div>
-            </div>
-            
-            <!-- technic -->
-            <div class="row">
-
-                <!-- title -->
-                <div class="col-12">
-                    <h3>
-                        FICHE TECHNIQUE
-                    </h3>
+    
+                <!-- excerpt -->
+                <div class="row">
+                    <div class="col">
+                        <div class="text"><?php the_excerpt(); ?></div>
+                    </div>
                 </div>
+                
+                <!-- technic section -->
+                <section>
 
-                <!-- description -->
-                <div class="col-4 col-xl-2 offset-xl-4">
-                    <p class="text technic"><i class="fas fa-clock"></i> 2 jours</p>
-                </div>
+                    <!-- section title -->
+                    <div class="row">
+                        <div class="col">
+                            <header>
+                                <h2 class="subtitle">FICHE TECHNIQUE</h2>
+                            </header>
+                        </div>
+                    </div>
+        
+                    <!-- description -->
+                    <div class="row">
+                        
+                        <!-- duration -->
+                        <div class="col-4 col-xl-2 offset-xl-4">
+                            <p class="text technic"><i class="fas fa-clock"></i> 2 jours</p>
+                        </div>
+        
+                        <!-- elevation -->
+                        <div class="col-4 col-xl-2">
+                            <p class="text technic"><i class="fas fa-mountain"></i> 830m</p>
+                        </div>
+        
+                        <!-- map -->
+                        <div class="col-4 col-xl-8 offset-xl-2 map">
+                            <p class="text technic display-none-xl"><i class="fas fa-map-marked-alt"></i> carte</p>
+                            <p class="display-xl"><img class="size-image" src="<?php echo get_template_directory_uri(); ?>/img/map.jpg" alt="itinéraire sur une carte"></p>
+                        </div>
+        
+                    </div>
 
-                <div class="col-4 col-xl-2">
-                    <p class="text technic"><i class="fas fa-mountain"></i> 830m</p>
-                </div>
+                </section>
 
-                <div class="col-4 col-xl-8 offset-xl-2 map">
-                    <p class="text technic display-none-xl"><i class="fas fa-map-marked-alt"></i> carte</p>
-                    <p class="display-xl"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/map.jpg" alt="itinéraire sur une carte"></p>
-                </div>
+                <!-- content section -->
+                <section>
 
-            </div>
+                    <!-- section title -->
+                    <div class="row">
+                        <div class="col">
+                            <header>
+                                <h2 class="subtitle">RÉCIT COMPLET</h2>
+                            </header>
+                        </div>
+                    </div>
 
-            <div class="row">
-                <div class="col">
                     <!-- content -->
-                    <h3>
-                        RÉCIT COMPLET
-                    </h3>
-
-                    <div class="text">
-                        <?php the_content(); ?>
+                    <div class="row">
+                        <div class="col">
+                            <div class="text"><?php the_content(); ?></div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
+                </section>
+    
+            </div>
+        </section>
     </article>
-    <?php }} ?>
+    <?php } ?>
 </main>
 
 <?php get_footer(); ?>

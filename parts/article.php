@@ -1,47 +1,52 @@
-<article>
+<article class="card">
 
-    <!-- image -->
-    <?php if ( has_post_thumbnail() ){ ?>
-        <div class="image">
+    <header class="size-image-parent">
+        <!-- check if image is present -->
+        <?php if ( has_post_thumbnail() ){ ?>
+
+            <!-- image -->
             <?php the_post_thumbnail(); ?>
+            
+            <!-- tag -->
             <p class="tag"><?php the_tags(''); ?></p>
-        </div>
-    <?php } ?>
+
+        <?php } ?>
+    </header>
 
     <!-- content -->
-    <div class="post-content">
+    <section class="post-content">
 
         <!-- title -->
-        <h2>
-            <?php the_title(); ?>
-        </h2>
+        <header>
+            <h3><?php the_title(); ?></h3>
+        </header>
 
         <!-- excerpt -->
-        <div class="excerpt">
-            <?php the_excerpt(); ?>
+        <div class="excerpt"><?php the_excerpt(); ?></div>
+
+    </section>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+    
+                <!-- category -->
+                <div class="col-4">
+                    <p><?php the_category(' ') ?></p>
+                </div>
+    
+                <!-- date -->
+                <div class="col-4">
+                    <p><?php the_time( get_option( 'date_format' ) ); ?></p>
+                </div>
+    
+                <!-- link -->
+                <div class="col-4">
+                    <p><a class="link" href="<?php the_permalink(); ?>"><i class="fas fa-eye"></i> article</a></p>
+                </div>
+    
+            </div>
         </div>
-        
-    </div>
-
-    <div class="container-fluid post-footer">
-        <div class="row">
-
-            <!-- category -->
-            <div class="col-4">
-                <p><?php the_category(' ') ?></p>
-            </div>
-
-            <!-- date -->
-            <div class="col-4">
-                <p><?php the_time( get_option( 'date_format' ) ); ?></p>
-            </div>
-
-            <!-- link -->
-            <div class="col-4">
-                <p><a class="post-link" href="<?php the_permalink(); ?>"><i class="fas fa-eye"></i> article</a></p>
-            </div>
-
-        </div>
-    </div>
+    </footer>
     
 </article>
