@@ -41,11 +41,11 @@
     
                 <div class="row">
                     
-                    <!-- loop on posts -->
+                    <!-- loop on posts and get articles -->
                     <?php if( have_posts() ){ while( have_posts() ){ the_post(); ?>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <?php get_template_part('parts/article'); ?>
-                    </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <?php get_template_part('parts/article'); ?>
+                        </div>
                     <?php }} ?>
     
                 </div>
