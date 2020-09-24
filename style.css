@@ -60,7 +60,7 @@ ul{
     }
 }
 
-/* TEXT */
+/* TITLES */
 h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--extra-bold);
@@ -104,7 +104,7 @@ h3{
 }
 
 /* IMAGE SIZING*/
-.logo{
+.size-image{
     display: block;
     width: 100%;
     height: auto;
@@ -247,7 +247,7 @@ body>footer{
 }
 
 @media (min-width: 768px){
-    .home>main .logo{
+    .home>main .size-image{
         position: absolute;
         bottom: 0;
     }

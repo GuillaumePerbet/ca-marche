@@ -8,7 +8,7 @@
                 <!-- logo -->
                 <div class="col-4 col-md-2">
                    <div class="footer-items">
-                       <img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo avec le texte 'ça marche' en dessous d'un dessin de montagne" width="200" height="200">
+                       <img class="size-image" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo avec le texte 'ça marche' en dessous d'un dessin de montagne" width="200" height="200">
                     </div>
                 </div>
 
