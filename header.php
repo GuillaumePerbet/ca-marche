@@ -32,4 +32,24 @@
             </div>
         </header>
 
+        <!-- add active class to menu item -->
+        <?php if( is_front_page() ){ ?>
+            <script>
+                activateHome();
+            </script>
+        <?php } ?>
+
+        <?php if( is_home() || is_archive() ){ ?>
+            <script>
+                activateBlog();
+            </script>
+        <?php } ?>
+
+        <?php if( is_single() ){ ?>
+            <script>
+                activateRando();
+            </script>
+        <?php } ?>
+
+
     <?php } ?>

@@ -293,12 +293,16 @@ body>header{
     display: flex;
 }
 
-#menu-header>li{
+#menu-header li{
     flex: 1;
     text-align: center;
 }
 
-#menu-header>li>a{
+#menu-header .active{
+    background-color: var(--dark-green);
+}
+
+#menu-header a{
     padding: 20.5px 0;
 }
 
@@ -308,7 +312,7 @@ body>header{
         font-size: 24px;
     }
 
-    #menu-header>li>a{
+    #menu-header a{
         padding: 30.5px 0;
     }
 }
@@ -318,7 +322,7 @@ body>header{
         font-size: 30px;
     }
 
-    #menu-header>li>a{
+    #menu-header a{
         padding: 34px 0;
     }
 }
