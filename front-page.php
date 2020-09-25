@@ -38,20 +38,53 @@
     
     <section class="display-md">
 
-        <!-- title -->
-        <div class="row">
-            <div class="col">
-                <h2 class="title">Les derniers articles</h2>
+        <div class="container">
+            <!-- title -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="title">Les derniers articles</h2>
+                </div>
             </div>
-        </div>
+    
+            <div class="row">
 
-        <!-- last posts -->
+                <!-- query last posts -->
+                <?php
+                $wp_query = new WP_Query(
+                    array(
+                        'posts_per_page' => 3
+                    )
+                );
+                ?>
+                
+                <!-- first post -->
+                <?php $wp_query->the_post(); ?>
+                <div class="col-md-6 col-xl-4 display-md">
+                    <?php get_template_part('parts/article'); ?>
+                </div>
 
+                <!-- second post -->
+                <?php $wp_query->the_post(); ?>
+                <div class="col-md-6 col-xl-4 display-md">
+                    <?php get_template_part('parts/article'); ?>
+                </div>
 
-        <!-- blog link -->
-        <div class="row">
-            <div class="col">
-                <p class="blog-link" class="display-none-md"><a href="<?php echo get_permalink(get_page_by_title('Blog')); ?>"><i class="fas fa-arrow-circle-right"></i> Blog</a></p>
+                <!-- third post -->
+                <?php $wp_query->the_post(); ?>
+                <div class="col-xl-4 display-xl">
+                    <?php get_template_part('parts/article'); ?>
+                </div>
+
+                <?php wp_reset_postdata(); ?>
+                        
+            </div>
+    
+    
+            <!-- blog link -->
+            <div class="row">
+                <div class="col">
+                    <p class="blog-link" class="display-none-md"><a href="<?php echo get_permalink(get_page_by_title('Blog')); ?>"><i class="fas fa-arrow-circle-right"></i> Blog</a></p>
+                </div>
             </div>
         </div>
 
