@@ -75,28 +75,32 @@ function register_menus() {
 }
 add_action( 'init', 'register_menus' );
 
-//Replace #latestpost placeholder with permalink
-function replace_placeholder_with_latest_post_permalink( $items , $menu , $args ) {
+//Replace #random_post placeholder in RANDO menu item with permalink of random post
+function replace_placeholder_with_random_post_permalink( $items ) {
+
+    //loop on header menu items
     foreach ( $items as $item ) {
 
-        if ( '#latestpost' != $item->url ){
-            continue;
+        //look for #random_post placeholder
+        if ( $item->url == '#random_post' ){
+
+            // query random post
+            $the_query = new WP_Query( array (
+                'orderby' => 'rand',
+                'posts_per_page' => '1'
+            ));
+            $the_query->the_post();
+            //replace placeholder with random post permalink
+            $item->url = get_permalink( get_the_ID() );
+            wp_reset_postdata();
+
         }
 
-        $latestpost = get_posts( array(
-            'numberposts' => 1,
-        ) );
-
-        if ( empty( $latestpost ) ){
-            continue;
-        }
-
-        $item->url = get_permalink( $latestpost[0]->ID );
     }
-
     return $items;
 }
+
 //Don't replace placeholder in wp-admin
 if ( ! is_admin() ) {
-    add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_with_latest_post_permalink', 10, 3 );
+    add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_with_random_post_permalink');
 }
