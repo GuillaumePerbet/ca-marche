@@ -25,6 +25,25 @@
                     </div>
                 </div>
             </nav>
+
+            <!-- add active class to menu item -->
+            <?php if( is_category('jura') ){ ?>
+                <script>
+                    activateJura();
+                </script>
+            <?php } ?>
+
+            <?php if( is_category('france') ){ ?>
+                <script>
+                    activateFrance();
+                </script>
+            <?php } ?>
+
+            <?php if( is_category('etranger') ){ ?>
+                <script>
+                    activateEtranger();
+                </script>
+            <?php } ?>
         </header>
 
         <section>

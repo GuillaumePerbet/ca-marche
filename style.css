@@ -507,9 +507,13 @@ body>footer{
     margin-right: 30px;
 }
 
-#menu-category li a{
+#menu-category a{
     width: 100%;
     padding: 8px 0;
+}
+
+#menu-category .active{
+    background-color: var(--dark-blue);
 }
 
 #blog{
