@@ -9,7 +9,7 @@
 
                 <!-- logo -->
                 <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-4 offset-md-0">
-                    <p><img class="size-image" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo avec le texte 'ça marche' en dessous d'un dessin de montagne" width="200" height="200"></p>
+                    <p><img class="size-image" src="<?php echo get_template_directory_uri(); ?>/img/logo-light.png" alt="logo avec le texte 'ça marche' en dessous d'un dessin de montagne" width="200" height="200"></p>
                 </div>
             
                 <!-- title -->
