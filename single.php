@@ -41,7 +41,7 @@
                 <!-- excerpt -->
                 <div class="row">
                     <div class="col">
-                        <div class="text"><?php the_excerpt(); ?></div>
+                        <div class="text"><?php the_field('excerpt'); ?></div>
                     </div>
                 </div>
                 
@@ -62,18 +62,18 @@
                         
                         <!-- duration -->
                         <div class="col-4 col-xl-2 offset-xl-4">
-                            <p class="text technic"><i class="fas fa-clock"></i> 2 jours</p>
+                            <p class="text technic"><i class="fas fa-clock"></i> <?php the_field('duration'); ?></p>
                         </div>
         
                         <!-- elevation -->
                         <div class="col-4 col-xl-2">
-                            <p class="text technic"><i class="fas fa-mountain"></i> 830m</p>
+                            <p class="text technic"><i class="fas fa-mountain"></i> <?php the_field('elevation'); ?>m</p>
                         </div>
         
                         <!-- map -->
                         <div class="col-4 col-xl-8 offset-xl-2 map">
-                            <p class="text technic display-none-xl"><i class="fas fa-map-marked-alt"></i> carte</p>
-                            <p class="display-xl"><img class="size-image" src="<?php echo get_template_directory_uri(); ?>/img/map.jpg" alt="itinéraire sur une carte"></p>
+                            <p class="text technic display-none-xl"><a href="<?php the_field('map'); ?>" target="_blank"><i class="fas fa-map-marked-alt"></i> carte</a></p>
+                            <p class="display-xl"><img class="size-image" src="<?php the_field('map') ?>" alt="itinéraire sur une carte"></p>
                         </div>
         
                     </div>
