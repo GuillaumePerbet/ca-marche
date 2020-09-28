@@ -16,9 +16,9 @@ L'intégration a été réalisée sans framework, en utilisant seulement un syst
 ### Pages
 L'architecture du site se compose de cinq pages principales:
 - front-page.php est la page d'accueil
-- home.php est la page de Blog
+- home.php est la page de blog
 - single.php est la page de description de randonnée
-- page.php est ytilisée pour la page de confidentialité
+- page.php est utilisée pour la page de confidentialité
 - 404.php est la page d'erreur 404
 
 ### Templates
