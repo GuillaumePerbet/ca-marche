@@ -22,7 +22,7 @@
         </header>
 
         <!-- excerpt -->
-        <div class="excerpt"><?php the_excerpt(); ?></div>
+        <div class="excerpt"><?php the_field('excerpt'); ?></div>
 
     </section>
 
