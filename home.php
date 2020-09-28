@@ -68,6 +68,13 @@
                     <?php }} ?>
     
                 </div>
+
+                <!-- pagination -->
+                <div class="row">
+                    <div class="col col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                        <div id="pagination"><?php posts_nav_link(); ?></div>
+                    </div>
+                </div>
             </div>
         </section>
 

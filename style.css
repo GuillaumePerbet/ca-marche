@@ -235,7 +235,7 @@ i{
 .card footer{
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--bold);
-    font-size: 11px;
+    font-size: 12px;
     color: white;
     text-align: center;
     letter-spacing: 1px;
@@ -425,7 +425,7 @@ body>footer{
 #hero .blog-link{
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--extra-bold);
-    font-size: 22px;
+    font-size: 21px;
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -521,6 +521,17 @@ body>footer{
     background-color: var(--dark-white);
 }
 
+#blog #pagination{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--bold);
+    font-size: 12px;
+    color: var(--dark-green);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
 @media (min-width: 768px){
     #blog #category{
         font-size: 20px;
@@ -533,6 +544,10 @@ body>footer{
 
     #menu-category li a{
         padding: 18px 0;
+    }
+
+    #blog #pagination{
+        font-size: 14px;
     }
 }
 
@@ -548,6 +563,10 @@ body>footer{
 
     #menu-category li a{
         padding: 26.5px 0;
+    }
+
+    #blog #pagination{
+        font-size: 16px;
     }
 }
 
