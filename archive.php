@@ -1,2 +1,2 @@
-<!-- comme home.php filtré par catégorie avec le bouton activé -->
+<!-- redirect to home.php -->
 <?php get_template_part( 'home' ) ?>
