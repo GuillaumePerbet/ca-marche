@@ -3,7 +3,7 @@
 
     <?php
     //query user data
-    $user = get_userdata(wp_get_current_user()->ID);
+    $user = get_users(array("role" => "administrator"))[0];
     ?>
 
     <footer>
