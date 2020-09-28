@@ -579,6 +579,10 @@ body>footer{
     background-color: var(--blue);
 }
 
+#single h1{
+    border-bottom: 1px solid var(--ocher);
+}
+
 #single .text{
     font-family: 'Raleway', sans-serif;
     font-weight: var(--medium);
